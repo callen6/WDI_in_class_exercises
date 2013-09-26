@@ -45,10 +45,11 @@ class Deck
 		@many_cards = card_deck
 	end
 	def look_at_cards
-		puts @many_cards
+		@many_cards
 	end
 	def draw_card_and_return
-		puts @many_cards[rand(@many_cards.length)]
+		[rand(@many_cards.length)]
+		
 	end
 	# def chaos_orb
 	# 	puts! @many_cards[rand(@many_cards.length)]
