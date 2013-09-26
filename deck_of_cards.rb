@@ -50,11 +50,11 @@ class Deck
 	def draw_card_and_return
 		@many_cards[rand(@many_cards.length)]
 	end
-	# def chaos_orb
-	# 	@many_cards[rand(@many_cards.length)].delete
-	# end
+	def chaos_orb
+		@many_cards.delete(2)#(rand(@many_cards.length))
+	end
 	def shuffle_cards
-		puts @many_cards.shuffle
+		@many_cards.shuffle
 
 	end
 
@@ -63,7 +63,7 @@ end
 deck = Deck.new(cards)
 # puts deck.look_at_cards
 # puts deck.draw_card_and_return
-# puts deck.chaos_orb
-p deck.draw_card_and_return
+puts deck.chaos_orb
+# p deck.draw_card_and_return
 # p deck.shuffle_cards
 
