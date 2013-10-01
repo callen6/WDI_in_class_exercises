@@ -3,9 +3,12 @@
 
 class Building
 	attr_accessor :apartments
+
 		def initialize
 			@apartments = []
+		end
 end
 
 building1 = Building.new
-building1.apartments << apartment1
+building1.apartments << apartment1 	#you an add this later because the attribute writer has been created 
+									# by the attribute attr_accessor
