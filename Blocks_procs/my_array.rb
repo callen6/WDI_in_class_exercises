@@ -1,4 +1,4 @@
-class Array
+class MyArray < Array
 	def my_each
 		for i in self
 		yield(i) if block_given?
@@ -12,3 +12,5 @@ class Array
 		sum
 	end
 end
+
+# this is a great thing to know! try again soon to understand it.

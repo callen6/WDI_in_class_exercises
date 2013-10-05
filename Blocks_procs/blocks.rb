@@ -69,7 +69,7 @@ end
 
 cap_hobbits_another_time = []
 something = students.each do |student|
-	cap_hobbits_another_time << student.capitalize
+	cap_hobbits_another_timerm- << student.capitalize
 end
 
 cap_hobbits2 = students.map(&:capitalize)
