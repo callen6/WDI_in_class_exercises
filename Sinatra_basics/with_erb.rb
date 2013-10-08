@@ -4,7 +4,16 @@ require 'sinatra/reloader' if development?
 
 
 get '/' do
- "Hello Index!"
+# this is not accessible in the view
+	something = "foo"
+# this is accessible in the view
+ 	@message = "Hello Index!"
+	erb :hello
+end
+
+get '/colors' do
+	@colors = ['red', 'green', 'blue']
+	erb :colors
 end
 
 # get = HTTP method (get, post, delete) '/hi' = path
@@ -41,6 +50,8 @@ get '/calculator/:x/:y' do
 	Subtracting #{x} from #{y} leaves #{subtract}.
 	Multiplying #{x} and #{y} gives #{multiply}.
 	Dividing #{x} by #{y} leaves #{divide}."
+	@colors = [add, subtract, multiply, divide]
+	erb :colors
 end
 
 get '/calc/:operation/:x/:y' do
@@ -51,19 +62,21 @@ get '/calc/:operation/:x/:y' do
 
 	if operation == 'add'
 		add = (x + y).to_s
-		"Adding #{x} to #{y} gives #{add}."
+		@result = "Adding #{x} to #{y} gives #{add}."
 	elsif operation == 'subtract'
 		subtract = (x - y).to_s
-		"Subtracting #{x} from #{y} leaves #{subtract}."
+		@result = "Subtracting #{x} from #{y} leaves #{subtract}."
 	elsif operation == 'multiply'
 		multiply = (x * y).to_s
-		"Multiplying #{x} and #{y} gives #{multiply}."
+		@result = "Multiplying #{x} and #{y} gives #{multiply}."
 	elsif operation == 'divide'
 		divide = (x / y).to_s
-		"Dividing #{x} by #{y} leaves #{divide}."
+		@result = "Dividing #{x} by #{y} leaves #{divide}."
 	else
-		"404. I think they're teaching us that in 8th grade. Can you wait awhile?"
+		@result = "404. I think they're teaching us that in 8th grade. Can you wait awhile?"
 	end
+
+	erb :calculator
 
 	# case/when/then syntax example:
 	# case operation
@@ -71,11 +84,3 @@ get '/calc/:operation/:x/:y' do
 	# when 'subtract' then (x-y).to_s
 	#etc.
 end
-
-
-
-
-
-
-
-
