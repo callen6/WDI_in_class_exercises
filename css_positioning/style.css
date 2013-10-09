@@ -1,0 +1,43 @@
+html {
+	font-family: "News Cycle";
+}
+
+.row {
+	margin: auto;
+	padding: 20px 0;
+}
+
+.full-column {
+	margin: auto;
+	width: 900px;
+	background: transparent;
+}
+
+.half-column {
+	width: 428px;
+	height: 390px;
+	display: inline-block;
+	
+}
+
+.third-column {
+	width: 277px;
+	height: 130px;
+	display: inline-block;
+}
+
+#first-column {
+	height: 200px;
+	font-size: 20px;
+	width: 880px;
+}
+
+.text-box {
+	padding: 10px;
+	overflow: scroll;
+	background: rgba(124, 124, 124, .31);
+}
+
+.text-box p {
+	font-size: 25px;
+}
