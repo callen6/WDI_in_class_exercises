@@ -1,0 +1,8 @@
+<div class='students'>
+	<% @students.each do |student| %>
+		<div class='student'>
+			<span class='student-name'> <%= student['first'] %> <%= student['last']%> </span>
+			<span class='gpa'> <%= student['gpa'] %> </span> <span class='dob'> <%= student['dob'] %> </span>
+</div>
+<% end %>
+</div>

@@ -1,0 +1,12 @@
+<div class='unis'>
+	<% @universities.each do |university| %>
+		<div class='uni'>
+			<span class='name'> <%= university['name'] %> <%= university['address']%> </span>
+			<span class='founded'> <%= university['founded'] %> </span> 
+			<span class='undergrads'> <%= university['undergrads'] %> </span>
+			<span class='grads'> <%= university['grads'] %> </span>
+			<span class='rankings'> <%= university['rankings'] %> </span>
+			<span class='avg_SAT'> <%= university['avg_SAT'] %> </span>
+</div>
+<% end %>
+</div>
