@@ -18,7 +18,7 @@ INSERT INTO students (first, last, dob, gpa) VALUES ('James', 'Bond', '4/12/1942
 INSERT INTO students (first, last, dob, gpa) VALUES ('Harry', 'Potter', '2/1/1982', 3.5);
 -- new table about computers
 
-DROP TABLE computers;
+-- DROP TABLE computers;
 CREATE TABLE computers
 (
 	id SERIAL4 PRIMARY KEY,

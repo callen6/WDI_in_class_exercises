@@ -1,4 +1,4 @@
-class Createposts < ActiveRecord::Migration
+class CreatePosts < ActiveRecord::Migration
   # this runs when you run the migration
   def up
   	create_table :posts do |t|
