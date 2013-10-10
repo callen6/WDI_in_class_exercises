@@ -1,0 +1,13 @@
+.post {
+	font-size: 25px;
+	font-family: Helvetica;
+	border: 2px solid black;
+}
+
+img {
+	border: 1px solid black;
+}
+
+.post p {
+	text-align: right;
+}

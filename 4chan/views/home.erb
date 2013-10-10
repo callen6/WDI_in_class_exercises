@@ -1,0 +1,14 @@
+<div class="post">
+	<% @posts.each do |entry| %>
+	<img src= "<%= entry["image_url"] %>" alt='smug new yorkers at dinner table'/>
+	<p><%= entry["body"] %></p>
+	<p><%= entry["author_name"] %></p>
+	<p><%= entry["created_at"] %></p>
+
+	<a href="/home/<%= entry["id"] %>/edit">Edit Post</a>
+	<form action="/home/<%= entry["id"] %>/delete" method="post">
+	<input type="submit" name="delete post" value="delete"/>
+	</form>
+
+	<% end %>
+</div>
